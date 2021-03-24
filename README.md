@@ -1,5 +1,5 @@
 # project
-CodePath Android Course 2021 Group 13
+CodePath Android Course 2021 Group 13 (NJIT)
 
 Unit 8: Group Milestone - README Example
 ===
