@@ -88,4 +88,4 @@ Optional:
 [Imgur](https://imgur.com/D2V0gaM)
 
 ### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+[Imgur](https://imgur.com/V8l4NJ3)
