@@ -82,7 +82,7 @@ Optional:
 * Group Screen -> Create a group page
 
 ## Wireframes
-<img src="i.imgur.com/nPqubEB.png" width=800><br>
+[Imgur](https://imgur.com/nPqubEB)
 
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://i.imgur.com/lYHn37F.jpg" height=200>
