@@ -1,14 +1,5 @@
-# project
-CodePath Android Course 2021 Group 13 (NJIT)
-
-Unit 8: Group Milestone - README Example
+Unit 8: Book Club - CodePath Android Course 2021 Group 13 (NJIT)
 ===
-
-:::info
-**Below is an example** of what your **Group Project README** should include and how it should be structured for the **Unit 8 Group Milestone Submission**.
-:::
-
-# TUNIN
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -17,15 +8,15 @@ Unit 8: Group Milestone - README Example
 
 ## Overview
 ### Description
-Tracks what music an individual listens to, and pairs them with others based on that music. Could be potentially used as a dating app, or just meeting new friends with similar music tastes.
+This Android application allows users to interact on a social environment by creating book clubs and discussing books. Users can add and remove books and can communicate with other users to discuss the contents of the book and questions related to the book.
 
 ### App Evaluation
-- **Category:** Social Networking / Music
+- **Category:** Social Networking / Literature
 - **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer, such as tinder or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:** Analyzes users music choices, and connects them to other users with similar choices. The user can then decide to message this person and befriend them if wanted.
+- **Story:** Analyzes users book choices, and connects them to other users with similar choices. The user can then decide to message this person via a group.
 - **Market:** Any individual could choose to use this app, and to keep it a safe environment, people would be organized into age groups.
 - **Habit:** This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they're looking for.
-- **Scope:** First we would start with pairing people based on music taste, then perhaps this could evolve into a music sharing application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.
+- **Scope:** First the user would be able to create or join a group depending their interests. The owner of the group can modify the group to the description of their liking. 
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
@@ -33,51 +24,62 @@ Tracks what music an individual listens to, and pairs them with others based on 
 **Required Must-have Stories**
 
 * User logs in to access previous chats and preference settings
-* User picks what their favorite artist/genre/etc. (Think Spotify interface)
-* Matches have a chat window to get to know each other, with the ability to skip music and unmatch (Tinder Style).
-* Profile pages for each user
-* Settings (Accesibility, Notification, General, etc.)
+* User can log in and log out of his or her account.
+* The current signed in user is persisted across app restarts.
+* The User could switch between different tabs
+* User should be able to edit predefined profile information (preferred genre section)
+* User should have the option to view/add friends
+* User should be able to edit/create groups (book clubs) as well as add people from their friends list
+* Groups have a real time discussion pages
 
 **Optional Nice-to-have Stories**
 
-* Log of past songs/people with album art covers matching
-* Page of most played songs (i.e. songs that most users are connecting through)
-* Profile Add-On: Top music choices, etc.
-* Optional Shuffle Button (i.e. random encounter/random song)
-* Listening/Encounter Queue
+* User sees app icon in home screen and styled bottom navigation view
+* Style the feed to look like the real book club page
+* User/ Group Profiles
+      - Allow the logged in user to add a profile photo
+      - Display the profile photo with each post
+      - Direct messaging support (direct 1 on 1)
 
 ### 2. Screen Archetypes
 
 * Login 
 * Register - User signs up or logs into their account
    * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person. 
-   * ...
-* Messaging Screen - Chat for users to communicate (direct 1-on-1)
-   * Upon selecting music choice users matched and message screen opens
+* Messaging Screen - Chat for users to communicate
+   * Upon selecting desired group, users matched and message screen opens
 * Profile Screen 
-   * Allows user to upload a photo and fill in information that is interesting to them and others
-* Song Selection Screen.
-   * Allows user to be able to choose their desired song, artist, genre of preference and begin listening and interacting with others.
-* Settings Screen
-   * Lets people change language, and app notification settings.
+   * Allows user to upload a photo and fill in information that is interesting to them and others, show active groups/ current books, and shows upcoming groups meetings
+* Friends Screen.
+   * Shows the user's friends list and have an option to add more friends.
+* Discussion Screen
+   * Allows group members to discussion contents of the book.
+* Home Screen
+   * Allows users to find/browse through different book club groups
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Music selection
+* Login/Registration
 * Profile
-* Settings
+* Messaging 
+* Friends
+* Home Screen  
+* Groups 
+
 
 Optional:
-* Music/Encounter Queue
-* Discover (Top Choices)
+* Settings
+* Discover section
 
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account creation if no log in is available
-* Music Selection (Or Queue if Optional) -> Jumps to Chat
-* Profile -> Text field to be modified. 
-* Settings -> Toggle settings
+* Profile -> Log in screen. 
+* Any Screen -> Any other screen using the navigation tool (Groups, Home Screen, Friends, Messaging)
+* Friend Screen -> Individual profile
+* Group Screen -> Discussion Page
+* Group Screen -> Create a group page
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
