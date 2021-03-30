@@ -1,4 +1,4 @@
-Unit 8: Book Club - CodePath Android Course 2021 Group 13 (NJIT)
+Unit 8: Book Club - CodePath Android Course 2021 Group 12 (NJIT)
 ===
 
 ## Table of Contents
