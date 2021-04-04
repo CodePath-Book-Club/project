@@ -5,6 +5,7 @@ Unit 8: Book Club - CodePath Android Course 2021 Group 12 (NJIT)
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
 1. [Wireframes](#Wireframes)
+1. [Schema](#Schema)
 
 ## Overview
 ### Description
@@ -89,3 +90,18 @@ Optional:
 
 ### [BONUS] Interactive Prototype
 [Imgur](https://imgur.com/V8l4NJ3)
+
+## Schema 
+### Models
+#### Post
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | objectId      | String   | unique id for each of the book club groups (default field) |
+   | author        | Pointer to User| image author |
+   | image         | File     | cover image of the book that user posts |
+   | caption       | String   | review by the user |
+   | commentsCount | Number   | number of comments that has been posted to a book |
+   | likesCount    | Number   | number of likes for the post |
+   | createdAt     | DateTime | date when post is created (default field) |
