@@ -116,3 +116,15 @@ Optional:
    | postCount | Number   | number of posts made by the user |
    | groupCount    | Number   | number of groups that the user is in |
    | friendList    | Array   | friends that the user can interact with |
+   
+   #### Book Club Group
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for each book club group (default field) |
+   | groupCreater        | Pointer to User| moderator of the group |
+   | image         | File     | image of the book |
+   | caption       | String   | caption states what the book club is about |
+   | groupName       | String   | name of the book club |
+   | commentsCount | Number   | number of comments that has been posted to an image |
+   | UserCount    | Number   | number of users in the club |
+   | createdAt     | DateTime | date when post is created (default field) |
