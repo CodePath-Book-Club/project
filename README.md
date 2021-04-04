@@ -105,3 +105,14 @@ Optional:
    | commentsCount | Number   | number of comments that has been posted to a book |
    | likesCount    | Number   | number of likes for the post |
    | createdAt     | DateTime | date when post is created (default field) |
+   
+   #### Profile
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for the user post (default field) |
+   | username       | Pointer to User| image author |
+   | userImage         | File     | profile picture |
+   | descriptionCaption       | String   | profile description of the author |
+   | postCount | Number   | number of posts made by the user |
+   | groupCount    | Number   | number of groups that the user is in |
+   | friendList    | Array   | friends that the user can interact with |
