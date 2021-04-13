@@ -53,7 +53,7 @@ This Android application allows users to interact on a social environment by cre
 ### App Walkthough GIF
 
 
-<img src="https://github.com/CodePath-Book-Club/project/blob/main/firstRendition.gif" title='Video Walkthrough' width='100' alt='Video Walkthrough' />
+<img src="https://github.com/CodePath-Book-Club/project/blob/main/firstRendition.gif" title='Video Walkthrough' width='500' alt='Video Walkthrough' />
 
 
 ### 2. Screen Archetypes
