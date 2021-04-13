@@ -32,9 +32,8 @@ This Android application allows users to interact on a social environment by cre
 - [x] Email must have “@“ in it, gives alert to user if it is not and does not make account
 - [x] If an account with similar credentials is already made, it won't make the account 
 - [x] Can make password hidden or visible when signing in by clicking on the eye icon
-- [x] When you close the app out while logged in and reopen it, the user is still signed in (Persisted)
 - [x] Connected data to Firebase
-- [ ] The current signed in user is persisted across app restarts.
+- [x] The current signed in user is persisted across app restarts.
 - [ ] The User could switch between different tabs
 - [ ] User should be able to edit predefined profile information (preferred genre section)
 - [ ] User should have the option to view/add friends
