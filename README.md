@@ -25,7 +25,7 @@ This Android application allows users to interact on a social environment by cre
 **Required Must-have Stories**
 
 - [x] User can login and logout of his or her account.
-- [x] Logout Button takes you to the welcome
+- [x] Logout Button takes you to the welcome screen
 - [x] When you are in the Login Screen, you can click text that says Register to bring you to the Register Screen
 - [x] When you are in the Register Screen, you can click text that says Login to bring you to the login screen
 - [x] Password has to be at least 7 characters long, gives alert to user if it is not and does not make account
