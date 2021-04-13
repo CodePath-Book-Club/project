@@ -50,6 +50,12 @@ This Android application allows users to interact on a social environment by cre
       - Display the profile photo with each post
       - Direct messaging support (direct 1 on 1)
 
+### App Walkthough GIF
+
+
+<img src="https://github.com/CodePath-Book-Club/project/blob/main/firstRendition.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 ### 2. Screen Archetypes
 
 * Login 
