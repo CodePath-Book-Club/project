@@ -25,7 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;*/
 
 public class LoginActivity extends AppCompatActivity
 {
-
     EditText emailEt, passwordEt;
     TextView notHaveAccntTv;
     Button loginbtn;

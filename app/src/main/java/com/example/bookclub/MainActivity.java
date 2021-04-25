@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity
         registerbtn = findViewById(R.id. registerButton);
         loginbtn = findViewById(R.id.loginButton);
 
+
+
         if(ParseUser.getCurrentUser() != null)
         {
             goTo_dashboardActivity();

@@ -8,8 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.parse.ParseUser;
 
 /*import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;*/
@@ -24,6 +26,16 @@ public class DashboardActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        if(ParseUser.getCurrentUser() == null)
+        {
+            Toast.makeText(DashboardActivity.this, "No user currently logged in", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(DashboardActivity.this, "Current user is: " + ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_SHORT).show();
+        }
+
 
 
         actionBar = getSupportActionBar();
@@ -83,8 +95,17 @@ public class DashboardActivity extends AppCompatActivity
         int id = item.getItemId();
         if(id == R.id.action_logout){
             //firebaseAuth.signOut();
-            checkUserStatus();
+            ParseUser.logOut();
+            //checkUserStatus();
+            goTo_mainActivity();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goTo_mainActivity()
+    {
+        Intent i = new Intent(DashboardActivity.this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }
