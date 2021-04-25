@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 //import com.google.firebase.database.FirebaseDatabase;
 
 
-public class RegistrationScreen extends AppCompatActivity {
+public class RegistrationActivity extends AppCompatActivity {
 
     EditText email, password;
     Button register;
@@ -76,7 +76,7 @@ public class RegistrationScreen extends AppCompatActivity {
         haveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(RegistrationScreen.this, LoginActivity.class));
+                startActivity(new Intent(RegistrationActivity.this, LoginActivity.class));
             }
         });
     }
@@ -96,13 +96,13 @@ public class RegistrationScreen extends AppCompatActivity {
 
 
 
-                            Toast.makeText(RegistrationScreen.this, "Registered \n" + user.getEmail(), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegistrationScreen.this, DashboardActivity.class));
+                            Toast.makeText(RegistrationActivity.this, "Registered \n" + user.getEmail(), Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(RegistrationActivity.this, DashboardActivity.class));
                             finish();
                         }
                         else{
                             //If sign in fails
-                            Toast.makeText(RegistrationScreen.this, "Authentication failed ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegistrationActivity.this, "Authentication failed ", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

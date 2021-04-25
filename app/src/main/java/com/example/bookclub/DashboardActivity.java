@@ -10,12 +10,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-public class DashboardActivity extends AppCompatActivity {
+/*import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;*/
 
-    FirebaseAuth firebaseAuth;
+public class DashboardActivity extends AppCompatActivity
+{
+    //FirebaseAuth firebaseAuth;
 
     ActionBar actionBar;
 
@@ -25,10 +26,10 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
 
-        actionBar= getSupportActionBar();
+        actionBar = getSupportActionBar();
         actionBar.setTitle("Profile");
 
-        firebaseAuth = FirebaseAuth.getInstance();
+        //firebaseAuth = FirebaseAuth.getInstance();
 
         //bottom navigation
         BottomNavigationView navigationView = findViewById(R.id.navigation);
@@ -51,8 +52,8 @@ public class DashboardActivity extends AppCompatActivity {
 
 
     private void checkUserStatus(){
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-        if(user !=null){
+        //FirebaseUser user = firebaseAuth.getCurrentUser();
+        /*if(user !=null){
             //user is signed in
            // profileTv.setText(user.getEmail());
         }
@@ -60,7 +61,7 @@ public class DashboardActivity extends AppCompatActivity {
             //user not signed in, go to main activity
             startActivity(new Intent(DashboardActivity.this, MainActivity.class));
             finish();
-        }
+        }*/
     }
 
     @Override
@@ -81,7 +82,7 @@ public class DashboardActivity extends AppCompatActivity {
         //get item id
         int id = item.getItemId();
         if(id == R.id.action_logout){
-            firebaseAuth.signOut();
+            //firebaseAuth.signOut();
             checkUserStatus();
         }
         return super.onOptionsItemSelected(item);
