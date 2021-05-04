@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_group"
-        android:icon="@drawable/ic_club"
-        android:title="Group"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/action_friends"
         android:icon="@drawable/ic_group"
         android:title="Friends"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_group"
+        android:icon="@drawable/ic_club"
+        android:title="Group"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"

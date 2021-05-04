@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity
         loginbtn = findViewById(R.id.loginButton);
 
 
-
         if(ParseUser.getCurrentUser() != null)
         {
             goTo_dashboardActivity();

@@ -18,23 +18,12 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-/*import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;*/
-
 
 public class RegistrationActivity extends AppCompatActivity
 {
     EditText email, password;
     Button register;
     TextView haveAccount;
-
-    //Declare FirebaseAuth
-    //private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -53,8 +42,6 @@ public class RegistrationActivity extends AppCompatActivity
         password = findViewById(R.id.password);
         register = findViewById(R.id. registerbtn);
         haveAccount = findViewById(R.id.have_accountTv);
-
-        //mAuth = FirebaseAuth.getInstance();
 
         register.setOnClickListener(new View.OnClickListener()
         {
@@ -151,30 +138,6 @@ public class RegistrationActivity extends AppCompatActivity
         startActivity(i);
         finish();
     }
-
-    /*private void registerUser(String emailIn, String passwordIn) {
-
-        mAuth.createUserWithEmailAndPassword(emailIn, passwordIn)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            //Sign in successful
-                            FirebaseUser user = mAuth.getCurrentUser();
-
-
-
-                            Toast.makeText(RegistrationActivity.this, "Registered \n" + user.getEmail(), Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegistrationActivity.this, DashboardActivity.class));
-                            finish();
-                        }
-                        else{
-                            //If sign in fails
-                            Toast.makeText(RegistrationActivity.this, "Authentication failed ", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-    }*/
 
     @Override
     public boolean onSupportNavigateUp()

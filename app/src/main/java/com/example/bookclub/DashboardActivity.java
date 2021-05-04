@@ -1,161 +1,69 @@
 package com.example.bookclub;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-
-import android.content.Intent;
+import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.parse.ParseUser;
 
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import com.example.bookclub.main_fragments.Profile_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.textfield.TextInputEditText;
 
-/*import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;*/
+//import projects.instagram_codepath.main_fragments.ComposeFragment;
+//import projects.instagram_codepath.main_fragments.PostsFragment;
 
 public class DashboardActivity extends AppCompatActivity
 {
-    private ImageView profilePic;
-    private TextView profileName;
-    private TextView clubs_num;
-    private TextInputEditText description_text;
-    private Button action_logout;
-    private BottomNavigationView navigation;
-    //FirebaseAuth firebaseAuth;
+    public static final String TAG = "MainActivity";
 
-    ActionBar actionBar;
+    private final FragmentManager fm = getSupportFragmentManager();
+    //private final Fragment home = new PostsFragment();
+    //private final Fragment compose = new ComposeFragment();
+    private final Fragment profile = new Profile_Fragment();
+
+    private BottomNavigationView bottom_menu;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView(R.layout.dashboard_activity);
 
-        if(ParseUser.getCurrentUser() == null)
-        {
-            Toast.makeText(DashboardActivity.this, "No user currently logged in", Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            Toast.makeText(DashboardActivity.this, "Current user is: " + ParseUser.getCurrentUser().getUsername(), Toast.LENGTH_SHORT).show();
-        }
+        bottom_menu = findViewById(R.id.MAIN_NAVIGATION);
+        final int friends_action = R.id.action_friends;
+        final int group_action = R.id.action_group;
+        final int profile_action = R.id.action_profile;
 
-        actionBar = getSupportActionBar();
-        actionBar.setTitle("Profile");
-        profilePic = findViewById(R.id.profilePic);
-        profileName = findViewById(R.id.profileName);
-        clubs_num = findViewById(R.id.clubs_num);
-        description_text = findViewById(R.id.description_text);
-        action_logout = findViewById(R.id.action_logout);
-        navigation = findViewById(R.id.navigation);
-        //actionBar= getSupportActionBar();
-        //actionBar.setTitle("Profile");
-
-        action_logout.setOnClickListener(new View.OnClickListener()
+        bottom_menu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
         {
             @Override
-            public void onClick(View v)
+            public boolean onNavigationItemSelected(@NonNull MenuItem item)
             {
-                ParseUser.logOut();
-                goTo_mainActivity();
-            }
-        });
-
-        //firebaseAuth = FirebaseAuth.getInstance();
-
-        //bottom navigation
-        //BottomNavigationView navigationView = findViewById(R.id.navigation);
-    //    navigationView.setOnNavigationItemSelectedListener(selectedListener);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment fragment;
-                switch (item.getItemId()) {
-                    case R.id.action_group:
-                        //fragment = fragment1;
+
+                switch (item.getItemId())
+                {
+                    case friends_action:
+                        fragment = profile;
                         break;
-                    case R.id.action_profile:
-                        //fragment = fragment2;
+                    case group_action:
+                        fragment = profile;
                         break;
-                    case R.id.action_friends:
+                    case profile_action:
+                        fragment = profile;
+                        break;
                     default:
-                        //fragment = fragment3;
-                        break;
+                        throw new IllegalStateException("Unexpected menu item: " + item.getItemId());
                 }
+
+                fm.beginTransaction().replace(R.id.MAIN_FRAME_FRAGMENT, fragment).commit();
+
                 return true;
             }
         });
-    }
 
-   // private BottomNavigationView. OnNavigationItemSelectedListener selectedListener =
-     //       new BottomNavigationView.OnNavigationItemSelectedListener() {
-    //            @Override
-   //             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    //handle item clicks
-                  //  switch(item.getItemId()){
-                        //case R.id.:
-                         //   return true;
-                 //   }
-                   // return false;
-             //   }
-     //       };
-
-
-    private void checkUserStatus(){
-        //FirebaseUser user = firebaseAuth.getCurrentUser();
-        /*if(user !=null){
-            //user is signed in
-           // profileTv.setText(user.getEmail());
-        }
-        else {
-            //user not signed in, go to main activity
-            startActivity(new Intent(DashboardActivity.this, MainActivity.class));
-            finish();
-        }*/
-    }
-
-    @Override
-    protected void onStart() {
-        //check on start of app
-        checkUserStatus();
-        super.onStart();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.menu_main, menu);
-        //return super.onCreateOptionsMenu(menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //get item id
-        int id = item.getItemId();
-        if(id == R.id.action_logout){
-            //firebaseAuth.signOut();
-            ParseUser.logOut();
-            //checkUserStatus();
-            goTo_mainActivity();
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void goTo_mainActivity()
-    {
-        Intent i = new Intent(DashboardActivity.this, MainActivity.class);
-        startActivity(i);
-        finish();
+        // Set default selection
+        bottom_menu.setSelectedItemId(R.id.action_profile);
     }
 }
