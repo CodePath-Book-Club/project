@@ -13,10 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.bookclub.parse_models.User_Extra;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
+
+import java.io.File;
 
 
 public class RegistrationActivity extends AppCompatActivity
@@ -121,12 +127,11 @@ public class RegistrationActivity extends AppCompatActivity
                 if(e != null)
                 {
                     Toast.makeText(RegistrationActivity.this, "Login failed due to: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    return;
                 }
                 else
                 {
                     Toast.makeText(RegistrationActivity.this, "Login successful.", Toast.LENGTH_SHORT).show();
-                    goTo_dashboardActivity();
+                    create_user_extra(user);
                 }
             }
         });
@@ -144,5 +149,30 @@ public class RegistrationActivity extends AppCompatActivity
     {
         onBackPressed();
         return super.onSupportNavigateUp();
+    }
+
+    private void create_user_extra(ParseUser u)
+    {
+        User_Extra us = new User_Extra();
+
+        us.set_profile_description("No profile description.");
+        us.set_user(u);
+
+        us.saveInBackground(new SaveCallback()
+        {
+            @Override
+            public void done(ParseException e)
+            {
+                if(e != null)
+                {
+                    Toast.makeText(RegistrationActivity.this, "Unable to generate User_Extra due to : " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(RegistrationActivity.this, "User_Extra generated successfully.", Toast.LENGTH_SHORT).show();
+                    goTo_dashboardActivity();
+                }
+            }
+        });
     }
 }

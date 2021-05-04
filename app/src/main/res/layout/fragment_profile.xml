@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/profilePic"
             android:layout_centerHorizontal="true"
-            android:text="Profile Name"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            tools:text="Profile Name" />
 
         <Button
             android:id="@+id/action_logout"
@@ -44,7 +44,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="263dp"
+        android:layout_height="252dp"
         android:layout_marginTop="-120dp"
         android:padding="20dp">
 
@@ -85,8 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/clubs_num_text"
                     android:layout_centerInParent="true"
-                    android:text="3"
-                    android:textSize="20sp">
+                    android:textSize="20sp"
+                    tools:text="500">
 
                 </TextView>
 
@@ -106,14 +106,21 @@
             android:layout_height="wrap_content"
             android:hint="Description">
 
+            <Button
+                android:id="@+id/button_save_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Save" />
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/description_text"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="95dp"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
                 android:minLines="5"
-                android:text="I like to read books." />
+                tools:text="I like to read books." />
 
         </com.google.android.material.textfield.TextInputLayout>
 
