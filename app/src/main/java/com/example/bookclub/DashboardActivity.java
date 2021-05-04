@@ -7,11 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.bookclub.main_fragments.Friend_Fragment;
 import com.example.bookclub.main_fragments.Profile_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-//import projects.instagram_codepath.main_fragments.ComposeFragment;
-//import projects.instagram_codepath.main_fragments.PostsFragment;
 
 public class DashboardActivity extends AppCompatActivity
 {
@@ -19,7 +17,7 @@ public class DashboardActivity extends AppCompatActivity
 
     private final FragmentManager fm = getSupportFragmentManager();
     //private final Fragment home = new PostsFragment();
-    //private final Fragment compose = new ComposeFragment();
+    private final Fragment friend = new Friend_Fragment();
     private final Fragment profile = new Profile_Fragment();
 
     private BottomNavigationView bottom_menu;
@@ -45,7 +43,7 @@ public class DashboardActivity extends AppCompatActivity
                 switch (item.getItemId())
                 {
                     case friends_action:
-                        fragment = profile;
+                        fragment = friend;
                         break;
                     case group_action:
                         fragment = profile;
