@@ -28,26 +28,26 @@ This Android application allows users to interact on a social environment by cre
 - [x] Logout Button takes you to the welcome screen
 - [x] When you are in the Login Screen, you can click text that says Register to bring you to the Register Screen
 - [x] When you are in the Register Screen, you can click text that says Login to bring you to the login screen
-- [x] Password has to be at least 7 characters long, gives alert to user if it is not and does not make account
 - [x] Email must have “@“ in it, gives alert to user if it is not and does not make account
 - [x] If an account with similar credentials is already made, it won't make the account 
-- [x] Can make password hidden or visible when signing in by clicking on the eye icon
-- [x] Connected data to Firebase
+- [x] Connected data to back4app
 - [x] The current signed in user is persisted across app restarts.
 - [X] The User could switch between different tabs
 - [x] User should be able to edit predefined profile information (preferred genre section)
 - [X] User should have the option to view/add friends
 - [X] User should be able to edit/create groups (book clubs) as well as add people from their friends list
 - [X] Groups have a real time discussion pages
+- [X] Direct messaging support (direct 1 on 1), messages are saved in the chats
 
 **Optional Nice-to-have Stories**
 
+- [x] Can make password hidden or visible when signing in by clicking on the eye icon
+- [x] Password has to be at least 7 characters long, gives alert to user if it is not and does not make account
 - [ ] User sees app icon in home screen and styled bottom navigation view
 - [ ] Style the feed to look like the real book club page
 - [ ] User/ Group Profiles
       - Allow the logged in user to add a profile photo
       - Display the profile photo with each post
-      - Direct messaging support (direct 1 on 1)
 
 ### App Walkthough GIF
 
