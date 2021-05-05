@@ -27,7 +27,6 @@ import java.util.List;
 
 public class MessageActivity extends AppCompatActivity
 {
-
     private TextInputEditText et_message;
     private Button button_send;
     private RecyclerView rv_messages;

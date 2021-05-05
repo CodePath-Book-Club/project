@@ -1,13 +1,10 @@
 package com.example.bookclub;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,12 +14,9 @@ import android.widget.Toast;
 import com.example.bookclub.parse_models.User_Extra;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
-import com.parse.ParseFile;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
-
-import java.io.File;
 
 
 public class RegistrationActivity extends AppCompatActivity
@@ -44,8 +38,8 @@ public class RegistrationActivity extends AppCompatActivity
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
 
-        email = findViewById(R.id. email);
-        password = findViewById(R.id.password);
+        email = findViewById(R.id.et_username);
+        password = findViewById(R.id.et_password);
         register = findViewById(R.id. registerbtn);
         haveAccount = findViewById(R.id.have_accountTv);
 

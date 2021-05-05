@@ -17,6 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookClub">
 
+        <activity android:name=".ClubActivity" />
+        <activity android:name=".CreateClubActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".DashboardActivity" />

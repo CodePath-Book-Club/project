@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.bookclub.main_fragments.Clubs_Fragment;
 import com.example.bookclub.main_fragments.Friend_Fragment;
 import com.example.bookclub.main_fragments.Profile_Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,7 +17,7 @@ public class DashboardActivity extends AppCompatActivity
     public static final String TAG = "MainActivity";
 
     private final FragmentManager fm = getSupportFragmentManager();
-    //private final Fragment home = new PostsFragment();
+    private final Fragment clubs = new Clubs_Fragment();
     private final Fragment friend = new Friend_Fragment();
     private final Fragment profile = new Profile_Fragment();
 
@@ -46,7 +47,7 @@ public class DashboardActivity extends AppCompatActivity
                         fragment = friend;
                         break;
                     case group_action:
-                        fragment = profile;
+                        fragment = clubs;
                         break;
                     case profile_action:
                         fragment = profile;
