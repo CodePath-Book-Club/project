@@ -1,20 +1,20 @@
 package com.example.bookclub.rv_adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.bookclub.MessageActivity;
 import com.example.bookclub.R;
 import com.example.bookclub.parse_models.User_Friend;
-import com.parse.ParseUser;
 
 import java.util.List;
 
@@ -56,6 +56,14 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
         private TextView tv_friend_name;
         private ImageView iv_friend_picture;
         private Button button_friend_message;
+        private User_Friend friend;
+
+        protected void goTo_messageActivity()
+        {
+            Intent i = new Intent(context, MessageActivity.class);
+            i.putExtra("friend_data", friend.get_friend().getUsername());
+            context.startActivity(i);
+        }
 
         public ViewHolder(@NonNull View itemView)
         {
@@ -68,14 +76,15 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.ViewHolder
 
         public void bind(User_Friend f)
         {
-            tv_friend_name.setText(f.get_friend().getUsername());
+            friend = f;
+            tv_friend_name.setText(friend.get_friend().getUsername());
 
             button_friend_message.setOnClickListener(new View.OnClickListener()
             {
                 @Override
                 public void onClick(View v)
                 {
-                    Toast.makeText(context, f.get_friend().getUsername() + " message button pressed.", Toast.LENGTH_SHORT).show();
+                    goTo_messageActivity();
                 }
             });
         }
