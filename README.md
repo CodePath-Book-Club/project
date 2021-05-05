@@ -34,11 +34,11 @@ This Android application allows users to interact on a social environment by cre
 - [x] Can make password hidden or visible when signing in by clicking on the eye icon
 - [x] Connected data to Firebase
 - [x] The current signed in user is persisted across app restarts.
-- [ ] The User could switch between different tabs
+- [X] The User could switch between different tabs
 - [x] User should be able to edit predefined profile information (preferred genre section)
-- [ ] User should have the option to view/add friends
-- [ ] User should be able to edit/create groups (book clubs) as well as add people from their friends list
-- [ ] Groups have a real time discussion pages
+- [X] User should have the option to view/add friends
+- [X] User should be able to edit/create groups (book clubs) as well as add people from their friends list
+- [X] Groups have a real time discussion pages
 
 **Optional Nice-to-have Stories**
 
@@ -52,7 +52,7 @@ This Android application allows users to interact on a social environment by cre
 ### App Walkthough GIF
 
 
-<img src="https://github.com/CodePath-Book-Club/project/blob/main/BookClub-CodePath.gif" title='Video Walkthrough' width='300' alt='Video Walkthrough' />
+<img src="https://github.com/CodePath-Book-Club/project/blob/main/BookClub_finalwalkthrough.gif" title='Video Walkthrough' width='300' alt='Video Walkthrough' />
 
 
 ### 2. Screen Archetypes
